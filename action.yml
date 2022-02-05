@@ -1,4 +1,5 @@
 name: 'Generate Docker tag'
+author: 'Luka Schäfer <luka.schaefer@paqato.com>'
 description: 'Generate a valid Docker tag from a GitHub ref'
 inputs:
   latest_branches:
@@ -11,3 +12,6 @@ outputs:
 runs:
   using: 'node16'
   main: 'dist/index.js'
+branding:
+  icon: tag
+  color: purple
