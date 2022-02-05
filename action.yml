@@ -1,0 +1,13 @@
+name: 'Generate Docker tag'
+description: 'Generate a valid Docker tag from a GitHub ref'
+inputs:
+  latest_branches:
+    required: false
+    description: 'List of branches that should receive the `latest` tag (comma-separated)'
+    default: 'master'
+outputs:
+  tag:
+    description: 'Generated Docker tag'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
