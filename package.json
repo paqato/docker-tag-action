@@ -1,6 +1,6 @@
 {
   "name": "docker-tag-action",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": true,
   "description": "GitHub Action to generate a valid Docker tag",
   "repository": "git@github.com:paqato/docker-tag-action.git",
