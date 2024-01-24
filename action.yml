@@ -10,7 +10,7 @@ outputs:
   tag:
     description: 'Generated Docker tag'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
 branding:
   icon: tag
