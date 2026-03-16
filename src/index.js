@@ -1,5 +1,5 @@
-const core = require('@actions/core')
-const github = require('@actions/github')
+import * as core from '@actions/core'
+import { context } from '@actions/github'
 
 const replacementPattern = /[^a-zA-Z0-9.-]/g
 const replacementCharacter = '-'
@@ -40,7 +40,7 @@ function generateTagFromRef (ref, latestBranches) {
 }
 
 try {
-    const ref = github.context.ref
+    const ref = context.ref
     const latestBranches = core.getInput('latest_branches').split(',')
     const tag = generateTagFromRef(ref, latestBranches)
     core.setOutput('tag', tag)
